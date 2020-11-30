@@ -113,7 +113,7 @@
 
                 const doTheMath = () => {
                     try {
-                        setHistory(display);
+                        setHistory([].concat(history, display));
                         setDisplay("" + eval(display))
                     } catch (err) {
                         setError(`Invalid expression: ${err.message}`)
